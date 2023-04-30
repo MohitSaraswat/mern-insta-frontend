@@ -12,7 +12,7 @@ function Postsfromfollowing() {
 
     useEffect(() => {
         showLoader();
-        fetch("/postsfromfollowing", {
+        fetch("https://mern-insta-backend.onrender.com/postsfromfollowing", {
             method: "get",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token")
@@ -79,7 +79,7 @@ function Postsfromfollowing() {
         event.preventDefault();//avaoid the page refresh
         const commentText = event.target[0].value;
 
-        fetch("/comment", {
+        fetch("https://mern-insta-backend.onrender.com/comment", {
             method: "put",
             headers: {
                 "Content-Type": "application/json",
@@ -127,10 +127,10 @@ function Postsfromfollowing() {
                                 <i className="material-icons" style={{ color: "red", marginRight: "10px" }}>favorite</i>
                                 {
                                     post.likes.includes(state._id)
-                                        ? <i onClick={() => likeUnlike(post._id, '/unlike')}
+                                        ? <i onClick={() => likeUnlike(post._id, 'https://mern-insta-backend.onrender.com/unlike')}
                                             className="material-icons"
                                             style={{ color: "red", cursor: "pointer" }}>favorite</i>
-                                        : <i onClick={() => likeUnlike(post._id, '/like')}
+                                        : <i onClick={() => likeUnlike(post._id, 'https://mern-insta-backend.onrender.com/like')}
                                             className="material-icons"
                                             style={{
                                                 color: "red",

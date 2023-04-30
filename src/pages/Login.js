@@ -22,7 +22,7 @@ const Login = () => {
             return
         }
         showLoader();
-        fetch('/login', {
+        fetch('https://mern-insta-backend.onrender.com/login', {
             method: 'post',
             headers: {
                 "Content-Type": "application/json"

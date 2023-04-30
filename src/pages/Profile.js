@@ -11,7 +11,7 @@ function Profile() {
 
     useEffect(() => {
         showLoader();
-        fetch("/myposts", {
+        fetch("https://mern-insta-backend.onrender.com/myposts", {
             method: "get",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token")

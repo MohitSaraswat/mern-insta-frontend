@@ -34,7 +34,7 @@ function OtherUserProfile() {
     }, []);//we want to lad only once when component is mounting/loading thats why an empty array as dependency
 
     const follow = () => {
-        fetch('/follow', {
+        fetch('https://mern-insta-backend.onrender.com/follow', {
             method: "put",
             headers: {
                 "Content-Type": "application/json",
@@ -66,7 +66,7 @@ function OtherUserProfile() {
     }
 
     const unfollow = () => {
-        fetch('/unfollow', {
+        fetch('https://mern-insta-backend.onrender.com/unfollow', {
             method: "put",
             headers: {
                 "Content-Type": "application/json",

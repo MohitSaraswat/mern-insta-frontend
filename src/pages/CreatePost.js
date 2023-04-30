@@ -16,7 +16,7 @@ function CreatePost() {
         if (isImageUploaded) {//only call when the value of image exist
             //call to create post api
             showLoader();
-            fetch("/createpost", {
+            fetch("https://mern-insta-backend.onrender.com/createpost", {
                 method: "post",
                 headers: {
                     "Content-Type": "application/json",

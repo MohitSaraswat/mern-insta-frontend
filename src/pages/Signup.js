@@ -34,7 +34,7 @@ const Signup = () => {
             return
         }
         showLoader();
-        fetch('/register', {
+        fetch('https://mern-insta-backend.onrender.com/register', {
             method: 'post',
             headers: {
                 "Content-Type": "application/json"
