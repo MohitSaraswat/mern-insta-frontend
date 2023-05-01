@@ -55,7 +55,7 @@ function Postsfromfollowing() {
     }
     const deletePost = (postId) => {
         showLoader();
-        fetch(`/deletepost/${postId}`, {
+        fetch(`https://mern-insta-backend.onrender.com/deletepost/${postId}`, {
             method: "delete",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token")

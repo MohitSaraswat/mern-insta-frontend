@@ -16,7 +16,7 @@ function OtherUserProfile() {
 
     useEffect(() => {
         showLoader();
-        fetch(`/user/${userId}`, {
+        fetch(`https://mern-insta-backend.onrender.com/user/${userId}`, {
             method: "get",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token")
